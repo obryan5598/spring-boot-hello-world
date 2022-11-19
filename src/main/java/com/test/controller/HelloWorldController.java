@@ -1,9 +1,9 @@
-package org.test.controller;
+package com.test.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;  
 import org.springframework.web.bind.annotation.RestController;
 
-import org.test.property.GetTimestamp;
+import com.test.property.GetTimestamp;
 
 @RestController  
 public class HelloWorldController   

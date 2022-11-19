@@ -1,4 +1,4 @@
-package org.test.property;
+package com.test.property;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
