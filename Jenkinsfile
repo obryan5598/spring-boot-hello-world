@@ -13,7 +13,7 @@ pipeline {
         sh 'mvn clean package'
       }
     }
-    stage('Create Container Image') {
+    /* stage('Create Container Image') {
       steps {
         echo 'Create Container Image..'
         
@@ -56,6 +56,6 @@ pipeline {
 
         }
       }
-    }
+    } */
   }
 }
