@@ -2,7 +2,9 @@
 
 pipeline {
 
-  agent jenkins-jenkins-agent
+      agent {
+        label "master"
+    }
 
   stages {
     stage('Build') {
