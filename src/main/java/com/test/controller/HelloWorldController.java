@@ -7,7 +7,10 @@ import com.test.property.GetTimestamp;
 
 @RestController  
 public class HelloWorldController   
-{  
+{
+
+	String greeting = System.getenv("GREETING");
+
 	@RequestMapping("/getTimestamp")
 	public String getTimestamp()
 	{
@@ -24,7 +27,7 @@ public class HelloWorldController
 		 run_env = System.getenv("RUN_ENV");
 
 		 String output;
-		 output = "<center><H1>Greetings for the day</H1>";
+		 output = "<center><H1>Greetings for the day: " + greeting + "</H1>";
 		 output = output + "<h2 style='color:green;'>version : 2.0</h2>";
 		 output = output + "<h2 style='color:red;'> Previous Timestamp :"+prev_timestamp+"</h2>";
 		 output = output + "<h2 style='color:blue;'> Latest Timestamp :"+latest_timestamp+"</h2>";
