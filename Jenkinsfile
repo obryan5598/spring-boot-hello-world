@@ -39,7 +39,7 @@ pipeline {
         script {
 
           openshift.withCluster() { 
-              openshift.withProject("<your_project_name") { 
+              openshift.withProject("backend") { 
                 def deployment = openshift.selector("deployment", "backend-1") 
 
                 if(!deployment.exists()){ 
