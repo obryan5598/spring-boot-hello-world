@@ -17,7 +17,7 @@ public class HelloWorldController
 		System.out.println(""); 
 		GetTimestamp t= new GetTimestamp();	    	
 		 String prev_timestamp = t.read();
-		 System.out.println("prev timestamp-----> "+prev_timestamp);
+		 System.out.println("Previous timestamp-----> "+prev_timestamp);
 
 		 java.util.Date date=new java.util.Date();
 		 String latest_timestamp = date.toString();
@@ -27,7 +27,7 @@ public class HelloWorldController
 		 run_env = System.getenv("RUN_ENV");
 
 		 String output;
-		 output = "<center><H1>Greetings for the day: " + greeting + "</H1>";
+		 output = "<center><H1>Greeting of the day: " + greeting + "</H1>";
 		 output = output + "<h2 style='color:green;'>version : 2.0</h2>";
 		 output = output + "<h2 style='color:red;'> Previous Timestamp :"+prev_timestamp+"</h2>";
 		 output = output + "<h2 style='color:blue;'> Latest Timestamp :"+latest_timestamp+"</h2>";
