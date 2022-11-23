@@ -17,7 +17,7 @@ public class HelloWorldController
 		System.out.println(""); 
 		GetTimestamp t= new GetTimestamp();	    	
 		 String prev_timestamp = t.read();
-		 System.out.println("Previous timestamp-----> "+prev_timestamp);
+		 System.out.println("Previous timestamp written -----> "+prev_timestamp);
 
 		 java.util.Date date=new java.util.Date();
 		 String latest_timestamp = date.toString();
