@@ -1,3 +1,5 @@
+// Use the following Jenkinsfile just when local Jenkins is installed
+
 node {
     def app
     def buildoutput

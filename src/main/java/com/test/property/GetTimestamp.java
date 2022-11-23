@@ -12,7 +12,7 @@ public class GetTimestamp {
 	private static String timestamp_file;
 	
 	static {
-		System.out.println("--------------GETTING timestamp_file");
+		System.out.println("--------------Reading timestamp_file");
 		try {
 			InputStream f1 = GetTimestamp.class.getClassLoader().getResourceAsStream("application.properties");
 	        Properties prop = new Properties();
