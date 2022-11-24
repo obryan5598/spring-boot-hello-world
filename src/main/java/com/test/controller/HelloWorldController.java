@@ -5,17 +5,29 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.test.property.GetTimestamp;
 
+import java.util.ArrayList;
+
 @RestController  
 public class HelloWorldController   
 {
 
 	String greeting = System.getenv("GREETING");
+	ArrayList<Integer[]> n = new ArrayList<>();
 
 	@RequestMapping("/getTimestamp")
 	public String getTimestamp()
 	{
-		System.out.println(""); 
-		GetTimestamp t= new GetTimestamp();	    	
+
+		Integer[] numbers = new Integer[10000000];
+		for (int i = 0; i < numbers.length; i++) {
+			numbers[i] = i;
+		}
+		n.add(numbers);
+
+		System.out.println("Allocated an array of 10000000 Integers");
+        System.out.println("Currently having a list of " + n.size() + " arrays of 10000000 Integers");
+
+        GetTimestamp t= new GetTimestamp();
 		 String prev_timestamp = t.read();
 		 System.out.println("Previous timestamp written -----> "+prev_timestamp);
 
