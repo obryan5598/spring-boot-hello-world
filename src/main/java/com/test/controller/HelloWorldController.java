@@ -17,7 +17,7 @@ public class HelloWorldController
 	@RequestMapping("/getTimestamp")
 	public String getTimestamp()
 	{
-
+		// Adding memory-greedy code
 		Integer[] numbers = new Integer[10000000];
 		for (int i = 0; i < numbers.length; i++) {
 			numbers[i] = i;
