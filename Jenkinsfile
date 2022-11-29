@@ -7,7 +7,7 @@ node {
 
     stage('Clone repository') {
         sh 'rm -rf ./spring-boot-hello-world'
-        sh 'git clone https://github.com/obryan5598/spring-boot-hello-world.git && git checkout remotes/origin/quay'
+        sh 'git clone https://github.com/obryan5598/spring-boot-hello-world.git'
 
     }
 
