@@ -1,17 +1,14 @@
-FROM quay.io/eclipse/che-java8-maven:nightly
+FROM registry.redhat.io/ubi8/openjdk-8
 
-MAINTAINER tech-tejendra
+MAINTAINER Giovanni Astarita
 
 USER root
 
 COPY src /home/app/src
 COPY pom.xml /home/app
 
-#ERROR
-#RUN nocmd
-
 RUN mkdir -p /var/local/SP
-
+RUN touch /var/local/SP/timestamp.properties
 RUN mvn -f /home/app/pom.xml clean package
 
 EXPOSE 8080

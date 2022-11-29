@@ -1,4 +1,4 @@
-package com.techtejendra.property;
+package com.test.property;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -12,10 +12,8 @@ public class GetTimestamp {
 	private static String timestamp_file;
 	
 	static {
-		System.out.println("--------------GETING timestamp_file");
+		System.out.println("--------------Reading timestamp_file");
 		try {
-			//File f = ResourceUtils.getFile("classpath:application.properties");
-			//InputStream f1 = new FileInputStream(f);
 			InputStream f1 = GetTimestamp.class.getClassLoader().getResourceAsStream("application.properties");
 	        Properties prop = new Properties();
 	        prop.load(f1);
@@ -64,8 +62,6 @@ public class GetTimestamp {
 
     public static void main(String[] args) {
     	GetTimestamp app2= new GetTimestamp();
-    	//app2.read("C:\\Users\\TEJENDRARANA\\Downloads\\spring-boot-hello-world\\spring-boot-hello-world\\src\\main\\resources\\application2.properties");
-    	//app2.read("/spring-boot-hello-world/src/main/resources/application2.properties");
     }
 
 }
